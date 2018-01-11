@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="checkbox" id="hide">
+    <label for="hide">Hide all dogs</label>
+
+    <ul id="dogs">
+        <li>poodle</li>
+        <li>pincher</li>
+        <li>border coli</li>
+        <li>amstaf</li>
+        <li>labrador</li>
+    </ul>
+    <script>
+        const list = document.querySelector('#dogs');
+        const check = document.querySelector('#hide');
+        check.addEventListener('change', function(e) {
+            if (check.checked) {
+                list.style.display = 'none';
+            } else {
+                list.style.display = 'initial'
+            }
+        })
+    </script>
+</body>
+
+</html>
